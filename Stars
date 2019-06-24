@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class Stars {
+
+    static void Stars(int numberOfStars) {
+        if(numberOfStars <= 0) {
+            System.out.println("Invalid Input");
+        }
+        for (int i = 1; i < (numberOfStars + 1); i++) {
+            for(int j = 1; j < (numberOfStars + 1);j++) {
+                if(j <= i) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.print("\n");
+        }
+    }
+
+
+
+    public static void main(String[] args) {
+        Scanner sc1 = new Scanner(System.in);
+        System.out.println("How many STARS do you want in the BASE of Your Pyramid?");
+        System.out.println("Please Enter an Integer Value: ");
+       int integerInput = Integer.parseInt(sc1.nextLine());
+       System.out.println(" " + integerInput + " was the number SELECTED");
+       Stars(integerInput);
+
+    }
+
+    
+}
